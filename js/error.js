@@ -78,8 +78,8 @@ window.onload = function () {
             var str = Array.from(messages)
             error.innerHTML = ""
             error.insertAdjacentHTML('afterbegin', str.join('<br/>'))
-            error.setAttribute("tabindex", "0");
-            error.focus();
+            // error.setAttribute("tabindex", "0");
+            // error.focus();
        
         }
         if (isFnameFilled == true && isEmailFilled == true && isEmailValid == true && isRated == true) {
