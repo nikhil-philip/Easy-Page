@@ -32,12 +32,21 @@ window.onload = function () {
             isEmailFilled = true
         }
         if (email.value.length > 0 && email.value.includes('@')) {
+            messages.delete(' There are errors in the form')
+            error.innerText = Array.from(messages).toString()
+            email.classList.remove("invalid")
+            document.getElementById('ic2').classList.add('hidden')
+            isEmailValid = true
+        }
+        /*
+        if (email.value.length > 0 && email.value.includes('@')) {
             messages.delete(' Email must have @ symbol')
             error.innerText = Array.from(messages).toString()
             email.classList.remove("invalid")
             document.getElementById('ic2').classList.add('hidden')
             isEmailValid = true
         }
+        */
     })
     for (var i = 0; i < rating.length; i++) {
         rating[i].addEventListener('change', function () {
@@ -63,11 +72,19 @@ window.onload = function () {
             isEmailFilled = false
         }
         if (!(email.value.includes('@')) && email.value.length > 0) {
+            messages.add(' There are errors in the form')
+            email.classList.add("invalid")
+            document.getElementById('ic2').classList.remove('hidden')
+            isEmailValid = false
+        }
+        /*
+        if (!(email.value.includes('@')) && email.value.length > 0) {
             messages.add(' Email must have @ symbol')
             email.classList.add("invalid")
             document.getElementById('ic2').classList.remove('hidden')
             isEmailValid = false
         }
+        */
         if (!(rateop1.checked || rateop2.checked || rateop3.checked || rateop4.checked)) { 
             messages.add(' Please give us a rating to continue')
             document.getElementById('ic3').classList.remove('hidden')
@@ -78,6 +95,7 @@ window.onload = function () {
             var str = Array.from(messages)
             error.innerHTML = ""
             error.insertAdjacentHTML('afterbegin', str.join('<br/>'))
+            // To fail error identification
             // error.setAttribute("tabindex", "0");
             // error.focus();
        

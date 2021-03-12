@@ -80,30 +80,32 @@ img {
     background-color: black;
 }
 .container {
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     background-color: #f2f2f2;
     padding: 20px;
     font-family:'Segoe UI';
 }
 /* Floating column for labels: 10% width */
+/*
 .col-10 {
     float: left;
     width: 15%;
     margin-top: 20px;
-}
-
+}*/
 /* Floating column for inputs: 50% width */
+/*
 .col-50 {
     float: left;
     width: 50%;
     margin-top: 20px;
 }
-
 .col-5 {
     float: left;
     width: 5%;
     margin-top: 25px;
 }
+*/
 .icon {
     border-radius: 50%;
     font-size: 20px;
@@ -112,11 +114,13 @@ img {
     font-weight: bold;
 }
 /* Clear floats after the columns */
+/*
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
+*/
 .red {
     color: #cc2900;
 }
@@ -135,13 +139,25 @@ img {
     display: none;
 }
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+/*
 @media screen and (max-width: 600px) {
   .col-10, .col-50, input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
 }
-
+*/
+/* To fail Resize and Reflow Submit button will get hidden on zoom */
+@media only screen and (max-width: 700px){
+    .class-to-hide-on-resize{ 
+       display: none
+     }
+  }
+  @media only screen and (max-width: 500px){
+    .class-to-hide-on-reflow{ 
+       display: none
+     }
+  }
 /* to fail use of color */
 #body p a{
     text-decoration: none;
@@ -150,3 +166,43 @@ img {
 .check{
     color: #6D6DE8;
 }
+
+/* For Footer Focus Order */
+.footer-links
+{
+    margin-right: 5%;
+    color: white;
+    padding: 1em;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+ }
+ .filler
+ {
+    height: 80px;
+    background: #f2f2f2;
+ }
+    #menu-outer 
+    {
+        height: 50px;
+        background: black;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border: 2px solid #f2f2f2;
+    }
+    
+    .table 
+    {
+        display: table;   /* Allow the centering to work */
+        margin: 0 auto;
+    }
+    
+    ul#horizontal-list
+     {
+        min-width: 696px;
+        list-style: none;
+        padding-top: 15px;
+     }
+     ul#horizontal-list li 
+    {
+            display: inline;
+    }
