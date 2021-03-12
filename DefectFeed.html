@@ -1,6 +1,7 @@
 <html>
 <head>
-    <title>Defective Feedback Form</title>
+    <!-- removed the title -->
+    <title></title>
     <link rel="stylesheet" href="css/styles.css" />
     <script type="text/javascript" src="js/error.js"></script>
     <link rel="stylesheet" href="css/fontawesome/css/all.css" />
@@ -8,15 +9,21 @@
 <body>
     <div role="banner">
         <img src="images/logo_1.png" />
-        <h1 aria-level="2">Feedback Form</h1>
+        <!-- added id to css because using h1 on other places -->
+        <h1 id="banner_heading" aria-level="2">Accesibility Easy page</h1>
         <span>
-            <a href="Feedback.html" target="_blank">Go to Accessible Feedback form</a>
+            <!-- added id to css because using a on other places -->
+            <a id="banner_link" href="Feedback.html" target="_blank">Go to Accessible Feedback form</a>
         </span>
     </div>
     <div class="container">
         <div class="success" aria-live="polite" id="success">
         </div>
         <div id="body">
+            <h3>Welcome to Accesibility</h1>
+            <p>Accessibility can be viewed as the "ability to access" and benefit from some system or entity. The concept focuses on enabling access for people with disabilities, or special needs, or enabling access through the use of assistive technology; however, research and development in accessibility brings benefits to everyone <a role="button" href="#">Read more</a>.</p>
+
+            
 
             <p>Please take a moment to provide us your valuable feedback</p>
             <div class="error-div" id="error-container">
@@ -78,12 +85,12 @@
                     </fieldset>
                 </div>
                 <br />
-                <input id="check" type="checkbox" />
-                <label for="check">Receive Email Notifications</label>
+                <input  id="check" type="checkbox" />
+                <label class="check" for="check">Receive Email Notifications</label>
                 <br />
                 <p>Fields marked with (asterisk) <span class="red">*</span> are required</p>
                 <br />
-                <button type="submit">Submit Form</button>
+                <button  type="submit">Submit Form</button>
             </form>
         </div>
     </div>
