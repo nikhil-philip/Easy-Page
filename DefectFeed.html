@@ -1,0 +1,92 @@
+<html>
+<head>
+    <title>Defective Feedback Form</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="text/javascript" src="js/error.js"></script>
+    <link rel="stylesheet" href="css/fontawesome/css/all.css" />
+</head>
+<body>
+    <div role="banner">
+        <img src="images/logo_1.png" />
+        <h1 aria-level="2">Feedback Form</h1>
+        <span>
+            <a href="Feedback.html" target="_blank">Go to Accessible Feedback form</a>
+        </span>
+    </div>
+    <div class="container">
+        <div class="success" aria-live="polite" id="success">
+        </div>
+        <div id="body">
+
+            <p>Please take a moment to provide us your valuable feedback</p>
+            <div class="error-div" id="error-container">
+
+            </div>
+            <form name="myform" id="form" novalidate class="form-margin" action="\" method="get">
+                <div class="row">
+                    <div class="col-10">
+                        <label for="first">First Name <span class="red">* </span><span id="ic1" class="hidden" aria-hidden="true"><i class="fas fa-exclamation-circle icon"></i></span></label>
+                    </div>
+                    <div class="col-50">
+                        <input id="first" type="text" class="default" tabindex="0"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10">
+                        <label for="last">Last Name</label>
+                    </div>
+                    <div class="col-50">
+                        <input id="last" type="text" class="default" tabindex="-1"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10">
+                        <label for="email">Email <span class="red">* </span><span id="ic2" class="hidden" aria-hidden="true"><i class="fas fa-exclamation-circle icon"></i></span></label>
+                    </div>
+                    <div class="col-50">
+                        <input id="email" type="email" class="default" aria-required="true"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="col-50">
+                        <select id="city" class="default">
+                            <option>Select a City</option>
+                            <option>Chennai</option>
+                            <option>Bangalore</option>
+                            <option>Mumbai</option>
+                            <option>Delhi</option>
+                        </select>
+                    </div>
+                </div><br /><br />
+
+
+                <div id="rating">
+                    <fieldset>
+
+                        <legend>Please select a rating for us <span class="red">* </span><span id="ic3" class="hidden" aria-hidden="true"><i class="fas fa-exclamation-circle icon"></i></span></legend>
+                        <input id="rate_option1" type="radio" name="rateus" aria-required="true" />
+                        <label for="rate_option1" class="radio">Exceptional</label><br />
+                        <input id="rate_option2" type="radio" name="rateus" aria-required="true" />
+                        <label for="rate_option2" class="radio">Good</label><br />
+                        <input id="rate_option3" type="radio" name="rateus" aria-required="true" />
+                        <label for="rate_option3" class="radio">Satisfactory</label><br />
+                        <input id="rate_option4" type="radio" name="rateus" aria-required="true" />
+                        <label for="rate_option4" class="radio">Need to Improve</label><br />
+                    </fieldset>
+                </div>
+                <br />
+                <input id="check" type="checkbox" />
+                <label for="check">Receive Email Notifications</label>
+                <br />
+                <p>Fields marked with (asterisk) <span class="red">*</span> are required</p>
+                <br />
+                <button type="submit">Submit Form</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

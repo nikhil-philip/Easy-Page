@@ -1,0 +1,143 @@
+/* Style inputs, select elements and textareas */
+.default{
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #81817e;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+input:focus, select:focus, div:focus, button:focus {
+    outline: 2px solid #0000b3;
+    outline-offset: 3px;
+}
+input[type=radio]{
+    margin:5px;
+}
+button[type=submit] {
+    float: right;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-align: center;
+    background: #011c5c;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+    button[type=submit]:focus, button[type=submit]:hover {
+        outline-offset: -4px;
+        outline: 2px solid white;
+        background-color: black;
+    }
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+fieldset {
+    border: 0;
+    padding: 0;
+}
+legend{
+    padding: 0px 0px 5px 0px;
+}
+.radio{
+    padding: 3px 12px 3px 0;
+}
+.radio-group-error {
+    outline: 2px solid red;
+    padding: 5px
+}
+body {
+    background-color: #011c5c;
+}
+h1{
+    display: inline-block;
+    color: aliceblue;
+    font-family:'Segoe UI';
+    padding: 0px 50px 5px 5px;
+    margin: 0px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    padding: 0px 20px 5px 5px;
+    display: inline-block;
+}
+a{
+    display: inline-block;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    color: white;
+    padding: 2px;
+    font-style: italic;
+}
+a:focus{
+    outline-offset: 5px;
+    outline: 2px solid white;
+    background-color: black;
+}
+.container {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-family:'Segoe UI';
+}
+/* Floating column for labels: 10% width */
+.col-10 {
+    float: left;
+    width: 15%;
+    margin-top: 20px;
+}
+
+/* Floating column for inputs: 50% width */
+.col-50 {
+    float: left;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.col-5 {
+    float: left;
+    width: 5%;
+    margin-top: 25px;
+}
+.icon {
+    border-radius: 50%;
+    font-size: 20px;
+    color: #ffadad;
+    background-color: black;
+    font-weight: bold;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.red {
+    color: #cc2900;
+}
+.error-div {
+    color: #960312;
+    font-weight:bold;
+}
+.success{
+    color: green;
+    font-weight: bold;
+}
+.invalid{
+    border: 2px solid red;
+}
+.hidden{
+    display: none;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-10, .col-50, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
