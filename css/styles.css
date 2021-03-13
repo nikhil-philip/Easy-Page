@@ -190,19 +190,27 @@ img {
         border: 2px solid #f2f2f2;
     }
     
-    .table 
-    {
-        display: table;   /* Allow the centering to work */
-        margin: 0 auto;
-    }
-    
-    ul#horizontal-list
-     {
-        min-width: 696px;
+    ul {
+        display: flex;
+        flex-direction: row;
         list-style: none;
-        padding-top: 15px;
-     }
-     ul#horizontal-list li 
-    {
-            display: inline;
-    }
+      }
+      li{
+        margin-right: 20px;
+      }
+      
+      ul li:first-child{
+        order: 5;
+      }
+      
+      ul li:nth-child(2){
+        order: 4;
+      }
+      
+      ul li:nth-child(3){
+        order: 3;
+      }
+      
+      ul li:nth-child(4){
+        order: 2;
+      }
