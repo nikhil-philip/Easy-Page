@@ -68,21 +68,21 @@ img {
   display: inline-block;
 }
 #banner_link {
+  
   background-color: yellow;
   display: inline-block;
+  margin-top: 90px;
   margin-left: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-right: 0px;
   color: black;
   padding: 2px;
   font-style: italic;
   text-decoration: blink;
+  float: right;
   border: 2px solid red;
 }
-#banner_link:focus {
-  outline-offset: 5px;
-  outline: 2px solid white;
-  background-color: yellow;
-}
+
 .container {
   position: relative;
   border-top-right-radius: 10px;
@@ -235,6 +235,10 @@ ul li:nth-child(4) {
   -o-animation: blink 0.2s linear infinite;
   animation: blink 0.2s linear infinite;
 }
+.blink:focus,.blink:hover{
+  outline: 2px solid #0000b3;
+    outline-offset: 3px;
+}
 @-webkit-keyframes blink {
   0% {
     opacity: 1;
@@ -313,4 +317,8 @@ ul li:nth-child(4) {
     top: 100px;
     left: 120px;
   }
+}
+
+#date{
+  resize: none;
 }

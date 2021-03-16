@@ -10,16 +10,13 @@
     <div role="banner">
       <img class="logo" src="images/logo_1.png" />
       <!-- added id to css because using h1 on other places -->
-      <h1 id="banner_heading" aria-level="2">Accesibility Easy page</h1>
-      <span>
-        <!-- added id to css because using a on other places -->
-        <a class="blink" id="banner_link" href="#" target="_blank">Help </a>
-      </span>
+      <h1 id="banner_heading" aria-level="2">Accessibility Easy page</h1>
+      
     </div>
     <div class="container">
       <div class="success" id="success"></div>
       <div id="body">
-        <h3>Welcome to Accesibility</h3>
+        <h3>Welcome to Accessibility</h3>
         <p class="class-to-hide-on-resize" id="paragraph">
           Accessibility can be viewed as the "ability to access" and benefit
           from some system or entity. The concept focuses on enabling access for
@@ -82,9 +79,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-10">
-              <label for="city">City</label>
-            </div>
+            <br>
             <div class="col-50">
               <select id="city" class="default">
                 <option>Select a City</option>
@@ -139,14 +134,14 @@
           <br />
             <div class="row">
                     <div class="col-10">
-                        <label for="Date">Date</label>
+                        <label for="date">Date</label>
                     </div>
                     <div class="col-50">
                         <input type="date" id="date" class="default" />
                     </div>
 
                 <br />
-                    <input type="file" id="file" name="filename" accept="application/pdf"/>
+                    <input type="file" id="file" name="filename" accept="application/pdf" aria-label="choose a file"/>
                 
                 <br /><br />
           <label >Gender?</label><br />
@@ -171,17 +166,24 @@
           <input id="check" type="checkbox" />
           <label class="check" for="check">Receive Email Notifications</label>
           <br />
-          <p>
+          <!-- <p>
             Fields marked with (asterisk) <span class="red">*</span> are
             required
-          </p>
+          </p> -->
           <br />
           <button class="class-to-hide-on-reflow" type="submit">
             Submit Form
           </button>
         </form>
       </div>
+      <div>
+        <!-- added id to css because using a on other places -->
+        <a class="blink" id="banner_link" href="#" target="_blank">Help </a>
+      </div>
+      
+      
     </div>
+    
     <div class="filler"></div>
     <div id="menu-outer">
       <div class="table">
@@ -194,5 +196,6 @@
         </ul>
       </div>
     </div>
+   
   </body>
 </html>
