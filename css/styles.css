@@ -1,90 +1,100 @@
 /* Style inputs, select elements and textareas */
-.default{
-    width: 50%;
-    padding: 12px;
-    border: 1px solid #81817e;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: vertical;
+.default {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #81817e;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
-input:focus, select:focus, div:focus, button:focus, a:focus {
-    outline: 2px solid #0000b3;
-    outline-offset: 3px;
+input:focus,
+select:focus,
+div:focus,
+button:focus,
+a:focus {
+  outline: 2px solid #0000b3;
+  outline-offset: 3px;
 }
-input[type=radio]{
-    margin:5px;
+input[type="radio"] {
+  margin: 5px;
 }
-button[type=submit] {
-    float: right;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    text-align: center;
-    background: #011c5c;
-    color: #ffffff;
-    font-size: 1.2rem;
-    font-family: sans-serif;
+button[type="submit"] {
+  float: right;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  text-align: center;
+  background: #011c5c;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-family: sans-serif;
 }
-    /* removed background color and changed outline color to fail focus visible */
-    button[type=submit]:focus, button[type=submit]:hover {
-        outline-offset: -4px;
-        outline: 2px solid #0A0AFF;   
-    }
+/* removed background color and changed outline color to fail focus visible */
+button[type="submit"]:focus,
+button[type="submit"]:hover {
+  outline-offset: -4px;
+  outline: 2px solid #0a0aff;
+}
 label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
 fieldset {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
-legend{
-    padding: 0px 0px 5px 0px;
+legend {
+  padding: 0px 0px 5px 0px;
 }
-.radio{
-    padding: 3px 12px 3px 0;
+.radio {
+  padding: 3px 12px 3px 0;
 }
 .radio-group-error {
-    outline: 2px solid red;
-    padding: 5px
+  outline: 2px solid red;
+  padding: 5px;
 }
 body {
-    background-color: #011c5c;
+  background-color: #011c5c;
+  transform: rotate(0deg);
 }
-#banner_heading{
-    display: inline-block;
-    color: aliceblue;
-    font-family:'Segoe UI';
-    padding: 0px 50px 5px 5px;
-    margin: 0px;
+#banner_heading {
+  display: inline-block;
+  color: aliceblue;
+  font-family: "Segoe UI";
+  padding: 0px 50px 5px 5px;
+  margin: 0px;
 }
 img {
-    max-width: 100%;
-    height: auto;
-    padding: 0px 20px 5px 5px;
-    display: inline-block;
+  max-width: 100%;
+  height: auto;
+  padding: 0px 20px 5px 5px;
+  display: inline-block;
 }
-#banner_link{
-    display: inline-block;
-    margin-left: 50px;
-    margin-bottom: 20px;
-    color: white;
-    padding: 2px;
-    font-style: italic;
+#banner_link {
+  background-color: yellow;
+  display: inline-block;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  color: black;
+  padding: 2px;
+  font-style: italic;
+  text-decoration: blink;
+  border: 2px solid red;
 }
-#banner_link:focus{
-    outline-offset: 5px;
-    outline: 2px solid white;
-    background-color: black;
+#banner_link:focus {
+  outline-offset: 5px;
+  outline: 2px solid white;
+  background-color: yellow;
 }
 .container {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    font-family:'Segoe UI';
+  position: relative;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  font-family: "Segoe UI";
 }
 /* Floating column for labels: 10% width */
 /*
@@ -107,11 +117,11 @@ img {
 }
 */
 .icon {
-    border-radius: 50%;
-    font-size: 20px;
-    color: #ffadad;
-    background-color: black;
-    font-weight: bold;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #ffadad;
+  background-color: black;
+  font-weight: bold;
 }
 /* Clear floats after the columns */
 /*
@@ -122,21 +132,21 @@ img {
 }
 */
 .red {
-    color: #cc2900;
+  color: #cc2900;
 }
 .error-div {
-    color: #960312;
-    font-weight:bold;
+  color: #960312;
+  font-weight: bold;
 }
-.success{
-    color: green;
-    font-weight: bold;
+.success {
+  color: green;
+  font-weight: bold;
 }
-.invalid{
-    border: 2px solid red;
+.invalid {
+  border: 2px solid red;
 }
-.hidden{
-    display: none;
+.hidden {
+  display: none;
 }
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 /*
@@ -148,69 +158,164 @@ img {
 }
 */
 /* To fail Resize and Reflow Submit button will get hidden on zoom */
-@media only screen and (max-width: 700px){
-    .class-to-hide-on-resize{ 
-       display: none
-     }
+@media only screen and (max-width: 700px) {
+  .class-to-hide-on-resize {
+    display: none;
   }
-  @media only screen and (max-width: 500px){
-    .class-to-hide-on-reflow{ 
-       display: none
-     }
+}
+@media only screen and (max-width: 500px) {
+  .class-to-hide-on-reflow {
+    display: none;
   }
+}
 /* to fail use of color */
-#body p a{
-    text-decoration: none;
+#body p a {
+  text-decoration: none;
 }
 
-.check{
-    color: #6D6DE8;
+.check {
+  color: #6d6de8;
 }
 
 /* For Footer Focus Order */
-.footer-links
-{
-    margin-right: 5%;
-    color: white;
-    padding: 1em;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
- }
- .filler
- {
-    height: 80px;
-    background: #f2f2f2;
- }
-    #menu-outer 
-    {
-        height: 50px;
-        background: black;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px;
-        border: 2px solid #f2f2f2;
-    }
-    
-    ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-      }
-      li{
-        margin-right: 20px;
-      }
-      
-      ul li:first-child{
-        order: 5;
-      }
-      
-      ul li:nth-child(2){
-        order: 4;
-      }
-      
-      ul li:nth-child(3){
-        order: 3;
-      }
-      
-      ul li:nth-child(4){
-        order: 2;
-      }
+.footer-links {
+  margin-right: 5%;
+  color: white;
+  padding: 1em;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.filler {
+  height: 80px;
+  background: #f2f2f2;
+}
+#menu-outer {
+  height: 50px;
+  background: black;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: 2px solid #f2f2f2;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+li {
+  margin-right: 20px;
+}
+
+ul li:first-child {
+  order: 5;
+}
+
+ul li:nth-child(2) {
+  order: 4;
+}
+
+ul li:nth-child(3) {
+  order: 3;
+}
+
+ul li:nth-child(4) {
+  order: 2;
+}
+
+/* reading twice */
+.sr-only {
+  position: absolute;
+  left: -625rem;
+  top: auto;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  overflow: hidden;
+}
+
+/* @group Blink */
+.blink {
+  -webkit-animation: blink 0.2s linear infinite;
+  -moz-animation: blink 0.2s linear infinite;
+  -ms-animation: blink 0.2s linear infinite;
+  -o-animation: blink 0.2s linear infinite;
+  animation: blink 0.2s linear infinite;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  50.01% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* @group blink end */
+
+@media only screen and (max-device-width: 775px) and (min-device-width: 320px) and (orientation: landscape) {
+  .orientation {
+    position: absolute;
+    top: 100px;
+    left: 120px;
+  }
+}
