@@ -1,42 +1,37 @@
 /* Style inputs, select elements and textareas */
-.default {
-  width: 50%;
-  padding: 12px;
-  border: 1px solid #81817e;
-  border-radius: 4px;
-  box-sizing: border-box;
-  resize: vertical;
+.default{
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
 }
-input:focus,
-select:focus,
-div:focus,
-button:focus,
-a:focus {
-  outline: 2px solid #0000b3;
-  outline-offset: 3px;
+input:focus, select:focus, div:focus, button:focus, a:focus {
+    outline: 2px solid #0000b3;
+    outline-offset: 3px;
 }
-input[type="radio"] {
-  margin: 5px;
+input[type=radio]{
+    margin:5px;
 }
-button[type="submit"] {
-  float: right;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  text-align: center;
-  background: #011c5c;
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-family: sans-serif;
+button[type=submit] {
+    float: right;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-align: center;
+    background: #011c5c;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-family: sans-serif;
 }
-/* removed background color and changed outline color to fail focus visible */
-button[type="submit"]:focus,
-button[type="submit"]:hover {
-  outline-offset: -4px;
-  outline: 2px solid #0a0aff;
-}
+    /* removed background color and changed outline color to fail focus visible */
+    button[type=submit]:focus, button[type=submit]:hover {
+        outline-offset: -4px;
+        outline: 2px solid #0A0AFF;   
+    }
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
