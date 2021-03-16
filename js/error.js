@@ -1,46 +1,59 @@
 window.onload = function () {
-  const fname = document.getElementById("first");
-  const email = document.getElementById("email");
-  const rateop1 = document.getElementById("rate_option1");
-  const rateop2 = document.getElementById("rate_option2");
-  const rateop3 = document.getElementById("rate_option3");
-  const rateop4 = document.getElementById("rate_option4");
-  const rating = document.myform.rateus;
-  const form = document.getElementById("form");
-  const body = document.getElementById("body");
-  const error = document.getElementById("error-container");
-  const success = document.getElementById("success");
-  var isFnameFilled,
-    isEmailFilled,
-    isEmailValid,
-    isRated = false;
-  var messages = new Set();
+    const fname = document.getElementById('first')
+    const email = document.getElementById('email')
+    const rateop1 = document.getElementById('rate_option1')
+    const rateop2 = document.getElementById('rate_option2')
+    const rateop3 = document.getElementById('rate_option3')
+    const rateop4 = document.getElementById('rate_option4')
+    const rating = document.myform.rateus
+    const form = document.getElementById('form')
+    const body = document.getElementById('body')
+    const error = document.getElementById('error-container')
+    const success = document.getElementById('success')
+    var isFnameFilled, isEmailFilled, isEmailValid, isRated = false
+    var messages = new Set()
+    var fileName = document.getElementById("file")
 
-  fname.addEventListener("input", (e) => {
-    if (fname.value.length > 0) {
-      messages.delete(" First Name is required");
-      error.innerText = Array.from(messages).toString();
-      fname.classList.remove("invalid");
-      document.getElementById("ic1").classList.add("hidden");
-      isFnameFilled = true;
-    }
-  });
-  email.addEventListener("input", (e) => {
-    if (email.value.length > 0) {
-      messages.delete(" Email is required");
-      error.innerText = Array.from(messages).toString();
-      email.classList.remove("invalid");
-      document.getElementById("ic2").classList.add("hidden");
-      isEmailFilled = true;
-    }
-    if (email.value.length > 0 && email.value.includes("@")) {
-      messages.delete(" There are errors in the form");
-      error.innerText = Array.from(messages).toString();
-      email.classList.remove("invalid");
-      document.getElementById("ic2").classList.add("hidden");
-      isEmailValid = true;
-    }
-    /*
+    fileName.addEventListener('change', (event) => {
+        console.log("in")
+       const target = event.target
+           if (target.files && target.files[0]) {
+           /*Maximum allowed size in bytes
+             5MB Example
+             Change first operand(multiplier) for your needs*/
+           const maxAllowedSize = 262144;
+           if (target.files[0].size > maxAllowedSize) {
+               // Here you can ask your users to load correct file
+                target.value = ''
+           }
+       }
+     })
+
+    fname.addEventListener('input', (e) => {
+        if (fname.value.length > 0) {
+            messages.delete(' First Name is required')
+            error.innerText = Array.from(messages).toString()
+            fname.classList.remove("invalid")
+            document.getElementById('ic1').classList.add('hidden')
+            isFnameFilled = true
+        }
+    })
+    email.addEventListener('input', (e) => {
+        if (email.value.length > 0) {
+            messages.delete(' Email is required')
+            error.innerText = Array.from(messages).toString()
+            email.classList.remove("invalid")
+            document.getElementById('ic2').classList.add('hidden')
+            isEmailFilled = true
+        }
+        if (email.value.length > 0 && email.value.includes('@')) {
+            messages.delete(' There are errors in the form')
+            error.innerText = Array.from(messages).toString()
+            email.classList.remove("invalid")
+            document.getElementById('ic2').classList.add('hidden')
+            isEmailValid = true
+        }
+        /*
         if (email.value.length > 0 && email.value.includes('@')) {
             messages.delete(' Email must have @ symbol')
             error.innerText = Array.from(messages).toString()
@@ -87,41 +100,24 @@ window.onload = function () {
             isEmailValid = false
         }
         */
-    if (
-      !(
-        rateop1.checked ||
-        rateop2.checked ||
-        rateop3.checked ||
-        rateop4.checked
-      )
-    ) {
-      messages.add(" Please give us a rating to continue");
-      document.getElementById("ic3").classList.remove("hidden");
-      document.getElementById("rating").classList.add("radio-group-error");
-      isRated = false;
-    }
-    if (
-      isFnameFilled == false ||
-      isEmailFilled == false ||
-      isEmailValid == false ||
-      isRated == false
-    ) {
-      var str = Array.from(messages);
-      error.innerHTML = "";
-      error.insertAdjacentHTML("afterbegin", str.join("<br/>"));
-      // To fail error identification
-      // error.setAttribute("tabindex", "0");
-      // error.focus();
-    }
-    if (
-      isFnameFilled == true &&
-      isEmailFilled == true &&
-      isEmailValid == true &&
-      isRated == true
-    ) {
-      body.innerText = "";
-      success.innerText =
-        "Form Submitted Successfully. Thanks for Your Feedback";
-    }
-  });
+        if (!(rateop1.checked || rateop2.checked || rateop3.checked || rateop4.checked)) { 
+            messages.add(' Please give us a rating to continue')
+            document.getElementById('ic3').classList.remove('hidden')
+            document.getElementById('rating').classList.add("radio-group-error")
+            isRated = false
+        }
+        if (isFnameFilled == false || isEmailFilled == false || isEmailValid == false || isRated == false) {
+            var str = Array.from(messages)
+            error.innerHTML = ""
+            error.insertAdjacentHTML('afterbegin', str.join('<br/>'))
+            // To fail error identification
+            // error.setAttribute("tabindex", "0");
+            // error.focus();
+       
+        }
+        if (isFnameFilled == true && isEmailFilled == true && isEmailValid == true && isRated == true) {
+            body.innerText = ""
+            success.innerText = "Form Submitted Successfully. Thanks for Your Feedback"
+        }
+    })
 };
