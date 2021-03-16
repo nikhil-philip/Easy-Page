@@ -19,7 +19,7 @@ window.onload = function () {
        const target = event.target
            if (target.files && target.files[0]) {
            /*Maximum allowed size in bytes
-             5MB Example
+             250KB Example
              Change first operand(multiplier) for your needs*/
            const maxAllowedSize = 262144;
            if (target.files[0].size > maxAllowedSize) {
