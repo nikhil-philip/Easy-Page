@@ -62,37 +62,37 @@ window.onload = function () {
             isEmailValid = true
         }
         */
-    })
-    for (var i = 0; i < rating.length; i++) {
-        rating[i].addEventListener('change', function () {
-            messages.delete(' Please give us a rating to continue')
-            error.innerText = Array.from(messages).toString()
-            document.getElementById('ic3').classList.add('hidden')
-            document.getElementById('rating').classList.remove("radio-group-error")
-            isRated = true
-        })
+  });
+  for (var i = 0; i < rating.length; i++) {
+    rating[i].addEventListener("change", function () {
+      messages.delete(" Please give us a rating to continue");
+      error.innerText = Array.from(messages).toString();
+      document.getElementById("ic3").classList.add("hidden");
+      document.getElementById("rating").classList.remove("radio-group-error");
+      isRated = true;
+    });
+  }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (fname.value === "" || fname.value == null) {
+      messages.add(" First Name is required");
+      fname.classList.add("invalid");
+      document.getElementById("ic1").classList.remove("hidden");
+      isFnameFilled = false;
     }
-    form.addEventListener('submit', (e) => {
-        e.preventDefault()
-        if (fname.value === '' || fname.value == null) {
-            messages.add(' First Name is required')
-            fname.classList.add("invalid")
-            document.getElementById('ic1').classList.remove('hidden')
-            isFnameFilled = false
-        }
-        if (email.value === '' || email.value == null) {
-            messages.add(' Email is required')
-            email.classList.add("invalid")
-            document.getElementById('ic2').classList.remove('hidden')
-            isEmailFilled = false
-        }
-        if (!(email.value.includes('@')) && email.value.length > 0) {
-            messages.add(' There are errors in the form')
-            email.classList.add("invalid")
-            document.getElementById('ic2').classList.remove('hidden')
-            isEmailValid = false
-        }
-        /*
+    if (email.value === "" || email.value == null) {
+      messages.add(" Email is required");
+      email.classList.add("invalid");
+      document.getElementById("ic2").classList.remove("hidden");
+      isEmailFilled = false;
+    }
+    if (!email.value.includes("@") && email.value.length > 0) {
+      messages.add(" There are errors in the form");
+      email.classList.add("invalid");
+      document.getElementById("ic2").classList.remove("hidden");
+      isEmailValid = false;
+    }
+    /*
         if (!(email.value.includes('@')) && email.value.length > 0) {
             messages.add(' Email must have @ symbol')
             email.classList.add("invalid")
@@ -121,6 +121,3 @@ window.onload = function () {
         }
     })
 };
- 
-
- 

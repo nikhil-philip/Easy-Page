@@ -1,75 +1,143 @@
- <html>
-<head>
+<html>
+  <head>
     <!-- removed the title -->
     <title></title>
     <link rel="stylesheet" href="css/styles.css" />
     <script type="text/javascript" src="js/error.js"></script>
     <link rel="stylesheet" href="css/fontawesome/css/all.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div role="banner">
-        <img src="images/logo_1.png" />
-        <!-- added id to css because using h1 on other places -->
-        <h1 id="banner_heading" aria-level="2">Accesibility Easy page</h1>
-        <span>
-            <!-- added id to css because using a on other places -->
-            <a id="banner_link" href="#" target="_blank">Help</a>
-        </span>
+      <img class="logo" src="images/logo_1.png" />
+      <!-- added id to css because using h1 on other places -->
+      <h1 id="banner_heading" aria-level="2">Accesibility Easy page</h1>
+      <span>
+        <!-- added id to css because using a on other places -->
+        <a class="blink" id="banner_link" href="#" target="_blank">Help </a>
+      </span>
     </div>
     <div class="container">
-        <div class="success" id="success">
-        </div>
-        <div id="body">
-            <h3>Welcome to Accesibility</h1>
-            <p class="class-to-hide-on-resize" id="paragraph">Accessibility can be viewed as the "ability to access" and benefit from some system or entity. The concept focuses on enabling access for people with disabilities, or special needs, or enabling access through the use of assistive technology; however, research and development in accessibility brings benefits to everyone <a role="button" href="#">Read more</a>.</p>
+      <div class="success" id="success"></div>
+      <div id="body">
+        <h3>Welcome to Accesibility</h3>
+        <p class="class-to-hide-on-resize" id="paragraph">
+          Accessibility can be viewed as the "ability to access" and benefit
+          from some system or entity. The concept focuses on enabling access for
+          people with disabilities, or special needs, or enabling access through
+          the use of assistive technology; however, research and development in
+          accessibility brings benefits to everyone
+          <a class="orientation" role="button" href="#"
+            >Read more <span class="sr-only">Read more</span></a
+          >.
+        </p>
+        <h3 aria-level="2">Feedback form</h3>
 
-            
-
-            <p id="paragraph">Please take a moment to provide us your valuable feedback</p>
-            <div class="error-div" id="error-container">
-
+        <p id="paragraph">
+          Please take a moment to provide us your valuable feedback
+        </p>
+        <div class="error-div" id="error-container"></div>
+        <form
+          name="myform"
+          id="form"
+          novalidate
+          class="form-margin"
+          action="\"
+          method="get"
+        >
+          <div class="row">
+            <div class="col-10">
+              <label for="first"
+                >First Name <span class="red">* </span
+                ><span id="ic1" class="hidden" aria-hidden="true"
+                  ><i class="fas fa-exclamation-circle icon"></i></span
+              ></label>
             </div>
-            <form name="myform" id="form" novalidate class="form-margin" action="\" method="get">
-                <div class="row">
-                    <div class="col-10">
-                        <label for="first">First Name <span class="red">* </span><span id="ic1" class="hidden" aria-hidden="true"><i class="fas fa-exclamation-circle icon"></i></span></label>
-                    </div>
-                    <div class="col-50">
-                        <input id="first" type="text" class="default" aria-label="name" tabindex="0"/>
-                       
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-10">
-                        <label for="last">Last Name</label>
-                    </div>
-                    <div class="col-50">
-                        <input id="last" type="text" class="default" tabindex="-1"/>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-10">
-                        <label for="email">Email <span class="red">* </span><span id="ic2" class="hidden" aria-hidden="true"><i class="fas fa-exclamation-circle icon"></i></span></label>
-                    </div>
-                    <div class="col-50">
-                        <input id="email" type="email" class="default" aria-required="true"/>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-10">
-                        <label for="city">City</label>
-                    </div>
-                    <div class="col-50">
-                        <select id="city" class="default">
-                            <option>Select a City</option>
-                            <option>Chennai</option>
-                            <option>Bangalore</option>
-                            <option>Mumbai</option>
-                            <option>Delhi</option>
-                        </select>
-                    </div>
-                </div><br /><br />
-                <div class="row">
+            <div class="col-50">
+              <input id="first" type="text" class="default" tabindex="0" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-10">
+              <label for="last">Last Name</label>
+            </div>
+            <div class="col-50">
+              <input id="last" type="text" class="default" tabindex="-1" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-10">
+              <label for="email"
+                >Email <span class="red">* </span
+                ><span id="ic2" class="hidden" aria-hidden="true"
+                  ><i class="fas fa-exclamation-circle icon"></i></span
+              ></label>
+            </div>
+            <div class="col-50">
+              <input
+                id="email"
+                type="email"
+                class="default"
+                aria-required="true"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-10">
+              <label for="city">City</label>
+            </div>
+            <div class="col-50">
+              <select id="city" class="default">
+                <option>Select a City</option>
+                <option>Chennai</option>
+                <option>Bangalore</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+              </select>
+            </div>
+          </div>
+          <br /><br />
+
+          <div id="rating">
+            <fieldset>
+              <legend>
+                Please select a rating for us <span class="red">* </span
+                ><span id="ic3" class="hidden" aria-hidden="true"
+                  ><i class="fas fa-exclamation-circle icon"></i
+                ></span>
+              </legend>
+              <input
+                id="rate_option1"
+                type="radio"
+                name="rateus"
+                aria-required="true"
+              />
+              <label for="rate_option1" class="radio">Exceptional</label><br />
+              <input
+                id="rate_option2"
+                type="radio"
+                name="rateus"
+                aria-required="true"
+              />
+              <label for="rate_option2" class="radio">Good</label><br />
+              <input
+                id="rate_option3"
+                type="radio"
+                name="rateus"
+                aria-required="true"
+              />
+              <label for="rate_option3" class="radio">Satisfactory</label><br />
+              <input
+                id="rate_option4"
+                type="radio"
+                name="rateus"
+                aria-required="true"
+              />
+              <label for="rate_option4" class="radio">Need to Improve</label
+              ><br />
+            </fieldset>
+          </div>
+          <br />
+            <div class="row">
                     <div class="col-10">
                         <label for="Date">Date</label>
                     </div>
@@ -81,43 +149,50 @@
                     <input type="file" id="file" name="filename" accept="application/pdf"/>
                 
                 <br /><br />
-                <div id="rating">
-                    <fieldset>
+          <label for="gender">Gender?</label><br />
+          <label
+            ><input
+              type="radio"
+              name="gender"
+              value="male"
+              id="gender"
+            />Male</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="gender"
+              value="female"
+              id="gender"
+            />Female</label
+          >
+          <br />
 
-                        <legend>Please select a rating for us <span class="red">* </span><span id="ic3" class="hidden" aria-hidden="true"><i class="fas fa-exclamation-circle icon"></i></span></legend>
-                        <input id="rate_option1" type="radio" name="rateus" aria-required="true" />
-                        <label for="rate_option1" class="radio">Exceptional</label><br />
-                        <input id="rate_option2" type="radio" name="rateus" aria-required="true" />
-                        <label for="rate_option2" class="radio">Good</label><br />
-                        <input id="rate_option3" type="radio" name="rateus" aria-required="true" />
-                        <label for="rate_option3" class="radio">Satisfactory</label><br />
-                        <input id="rate_option4" type="radio" name="rateus" aria-required="true" />
-                        <label for="rate_option4" class="radio">Need to Improve</label><br />
-                    </fieldset>
-                </div>
-                <br />
-                <input  id="check" type="checkbox" />
-                <label class="check" for="check">Receive Email Notifications</label>
-                <br />
-                <p>Fields marked with (asterisk) <span class="red">*</span> are required</p>
-                <br />
-                <button class="class-to-hide-on-reflow" type="submit">Submit Form</button>
-            </form>
-        </div>
-    </div>
-    <div class="filler">
-    </div>
-    <div id="menu-outer">
-        <div class="table">
-         <ul id="horizontal-list">
-      <li><a class="footer-links" href="#">W3Schools</a></li>
-      <li><a class="footer-links" href="#">Google</a></li>
-      <li><a class="footer-links" href="#">Microsoft</a></li>
-      <li><a class="footer-links" href="#">GitHub</a></li>
-      <li><a class="footer-links" href="#">Apple</a></li>
-        </ul>
-        </div>
+          <input id="check" type="checkbox" />
+          <label class="check" for="check">Receive Email Notifications</label>
+          <br />
+          <p>
+            Fields marked with (asterisk) <span class="red">*</span> are
+            required
+          </p>
+          <br />
+          <button class="class-to-hide-on-reflow" type="submit">
+            Submit Form
+          </button>
+        </form>
       </div>
-
-</body>
+    </div>
+    <div class="filler"></div>
+    <div id="menu-outer">
+      <div class="table">
+        <ul id="horizontal-list">
+          <li><a class="footer-links" href="#">W3Schools</a></li>
+          <li><a class="footer-links" href="#">Google</a></li>
+          <li><a class="footer-links" href="#">Microsoft</a></li>
+          <li><a class="footer-links" href="#">GitHub</a></li>
+          <li><a class="footer-links" href="#">Apple</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
