@@ -12,7 +12,22 @@ window.onload = function () {
     const success = document.getElementById('success')
     var isFnameFilled, isEmailFilled, isEmailValid, isRated = false
     var messages = new Set()
+    var fileName = document.getElementById("file")
 
+    fileName.addEventListener('change', (event) => {
+        console.log("in")
+       const target = event.target
+           if (target.files && target.files[0]) {
+           /*Maximum allowed size in bytes
+             5MB Example
+             Change first operand(multiplier) for your needs*/
+           const maxAllowedSize = 262144;
+           if (target.files[0].size > maxAllowedSize) {
+               // Here you can ask your users to load correct file
+                target.value = ''
+           }
+       }
+     })
 
     fname.addEventListener('input', (e) => {
         if (fname.value.length > 0) {
@@ -105,4 +120,7 @@ window.onload = function () {
             success.innerText = "Form Submitted Successfully. Thanks for Your Feedback"
         }
     })
-}
+};
+ 
+
+ 

@@ -1,4 +1,4 @@
-<html>
+ <html>
 <head>
     <!-- removed the title -->
     <title></title>
@@ -35,7 +35,8 @@
                         <label for="first">First Name <span class="red">* </span><span id="ic1" class="hidden" aria-hidden="true"><i class="fas fa-exclamation-circle icon"></i></span></label>
                     </div>
                     <div class="col-50">
-                        <input id="first" type="text" class="default" tabindex="0"/>
+                        <input id="first" type="text" class="default" aria-label="name" tabindex="0"/>
+                       
                     </div>
                 </div>
                 <div class="row">
@@ -68,8 +69,18 @@
                         </select>
                     </div>
                 </div><br /><br />
+                <div class="row">
+                    <div class="col-10">
+                        <label for="Date">Date</label>
+                    </div>
+                    <div class="col-50">
+                        <input type="date" id="date" class="default" />
+                    </div>
 
-
+                <br />
+                    <input type="file" id="file" name="filename" accept="application/pdf"/>
+                
+                <br /><br />
                 <div id="rating">
                     <fieldset>
 
